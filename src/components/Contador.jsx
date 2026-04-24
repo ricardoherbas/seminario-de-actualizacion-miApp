@@ -1,0 +1,14 @@
+import { useState } from "react";
+
+function Contador () {
+    const [count,setCount] = useState(0);
+    return (
+        <div>
+            <h2>Contador {count}</h2>
+            <button onClick={()=>setCount(count+1)}>Aumentar</button>
+            <button onClick={()=>setCount(count>0 ? count-1 : 0)}>Disminuir</button>
+        </div>
+    )
+}
+
+export default Contador;
